@@ -21756,6 +21756,7 @@ static int clif_parse(int fd)
 			return 0;
 		}
 	}
+	int rest = (int)RFIFOREST(fd);
 	if ((int)RFIFOREST(fd) < packet_len){
 		ShowWarning( "clif_parse: Received packet 0x%04x with expected packet length %d, but only %d bytes remaining, disconnecting session #%d.\n", cmd, packet_len, RFIFOREST( fd ), fd );
 #ifdef DUMP_INVALID_PACKET
