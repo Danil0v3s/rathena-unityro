@@ -472,6 +472,11 @@ int clif_send(const void* buf, int len, struct block_list* bl, enum send_target 
 	int x0 = 0, x1 = 0, y0 = 0, y1 = 0, fd;
 	struct s_mapiterator* iter;
 
+#ifdef LOG_SEND_PACKET
+	ShowDebug("clif_send: Sending 0x%04X (length %d)\n", RBUFW(buf, 0), len);
+#endif // LOG_SEND_PACKET
+
+
 	if( type != ALL_CLIENT )
 		nullpo_ret(bl);
 

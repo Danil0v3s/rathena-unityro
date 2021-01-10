@@ -75,6 +75,10 @@
 	#define DUMP_INVALID_PACKET
 #endif
 
+#ifndef LOG_SEND_PACKET
+	#define LOG_SEND_PACKET
+#endif
+
 /**
  * No settings past this point
  **/
