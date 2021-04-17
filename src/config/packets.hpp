@@ -76,7 +76,7 @@
 #endif
 
 #ifndef LOG_SEND_PACKET
-	#define LOG_SEND_PACKET
+	//#define LOG_SEND_PACKET
 #endif
 
 /**
